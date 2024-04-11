@@ -1,0 +1,47 @@
+[{
+  "@context": "http://schema.org/",
+  "@type": "Organization",
+  "logo": "https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png"
+},{
+  "@context": "http://schema.org/",
+  "@type": "EmailMessage",
+  "subjectLine": "[Important] Please add subject line in annotation"
+},{
+  "@context": "http://schema.org/",
+  "@type": "DiscountOffer",
+  "description": "20% de dto.",
+
+  "discountCode": "EXCLUSIVAS20",
+  "availabilityStarts": "2024-04-07T10:16:05-07:00",
+  "availabilityEnds": "2024-04-10T10:16:05-07:00"
+},{
+  "@context": "http://schema.org/",
+  "@type": "PromotionCard",
+  "image": "https://andreamx.vteximg.com.br/arquivos/ids/16817404-1000-1000/Perfil-Normal.jpg?v=638417648073770000",
+  "url": "https://google.com",
+  "headline": "Glasses",
+  "price": 149,
+  "priceCurrency": "USD",
+  "discountValue": 30,
+  "position": 1
+},{
+  "@context": "http://schema.org/",
+  "@type": "PromotionCard",
+  "image": "https://andreamx.vteximg.com.br/arquivos/ids/15239840-1000-1000/Perfil-Normal.jpg?v=637971763640500000",
+  "url": "https://google.com",
+  "headline": "Ski boots",
+  "price": 249,
+  "priceCurrency": "USD",
+  "discountValue": 50,
+  "position": 2
+},{
+  "@context": "http://schema.org/",
+  "@type": "PromotionCard",
+  "image": "https://www.google.com/gmail-for-marketers/promo-tab/markup-tool/sneakers.jpg",
+  "url": "https://google.com",
+  "headline": "Sneakers",
+  "price": 179,
+  "priceCurrency": "USD",
+  "discountValue": 30,
+  "position": 3
+}]

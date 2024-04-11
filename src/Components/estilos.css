@@ -1,0 +1,25 @@
+
+  .list-item {
+    list-style-type: none;
+    padding: 10px;
+    margin: 2px;
+    color: #eee;
+  }
+  
+  .list-item:hover {
+    background-color: #777;
+  }
+  
+  .list-item-highlighted {
+    background-color: slateblue;
+  }
+  
+  .list-item-normal {
+    background-color: #444;
+  }
+  #container {
+    background-color: #eee;
+    width: 300px;
+    padding: 0px;
+  }
+  

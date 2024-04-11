@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import Home from './Components/Home'
 
 import SmCero from './SM/Cero';
@@ -13,8 +12,9 @@ import ResCuatro from './Responsys/ResCuatro';
 import ResCinco from './Responsys/ResCinco';
 import ResSeis from './Responsys/ResSeis';
 import ResSiete from './Responsys/ResSiete';
-import ResOcho from './Responsys/ResOcho';
+//import ResOcho from './Responsys/ResOcho';
 import ResNueve from './Responsys/ResNueve';
+import ResDiez from './Responsys/ResDiez';
 
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import Generator from './Components/List_Generator_Sm';
@@ -28,30 +28,36 @@ var lista_3 = Generator_Push();
 
 //Funcion para generar la lista de SalesManago
     function Sales(){
-        const listItems = lista.map(lisItem => <li className="list-group-item"><nav><Link to={lisItem.link} className="text-decoration-none fw-bold text-dark">{lisItem.name}</Link></nav></li>);
-    return <ul className="list-group list-group-flush">{listItems}</ul>
+        const listItems = lista.map(lisItem => <li className="list-group-item list-group-item-action play"><nav><Link to={lisItem.link} className="text-decoration-none fw-bold text-dark">{lisItem.name}</Link></nav></li>);
+        console.log(lista)
+    return <ul className="list-group list-group-flush" id="ulUno">{listItems}</ul>
     };
 //Funcion para generar la lista de Responsys
     function Res(){
-        const listItems = lista_2.map(lisItem => <li className="list-group-item"><nav><Link to={lisItem.link} className="text-decoration-none fw-bold text-dark">{lisItem.name}</Link></nav></li>);
-    return <ul className="list-group list-group-flush">{listItems}</ul>
-    }
+        
+        const listItems = lista_2.map(lisItem => <li className="list-group-item list-group-item-action" id={lisItem.id}><nav><Link to={lisItem.link} className="text-decoration-none fw-bold text-dark">{lisItem.name}</Link></nav></li>);
+    return <ul className="list-group list-group-flush ">{listItems}</ul>
+        };
+
+    
 //Funcion para generar la lista de PushWoosh
     function Push(){
-        const listItems = lista_3.map(lisItem => <li className="list-group-item"><nav><Link to={lisItem.link} className="text-decoration-none fw-bold text-dark">{lisItem.name}</Link></nav></li>);
+        const listItems = lista_3.map(lisItem => <li className="list-group-item list-group-item-action"><nav><Link to={lisItem.link} className="text-decoration-none fw-bold text-dark">{lisItem.name}</Link></nav></li>);
     return <ul className="list-group list-group-flush">{listItems}</ul>
     }
 
 function Inicio() {
+
+    
 //Acá regresa toda la estructura principal
     return (
       <div className="Primer">
         <BrowserRouter>
-        <div className="Header w-100 fixed-top">
+        <div className="Header fixed-top">
         <div className="container">
-            <nav className="navbar navbar-light bg-light">
+            <nav className="navbar navbar-dark bg-dark">
             <div className="container-fluid">
-                <Link to={"/"} className="text-decoration-none fw-bold text-dark"><strong>Andrea Content Analyst</strong></Link>
+                <Link to={"/"} className="text-decoration-none fw-bold text-white"><strong>Andrea Content Analyst</strong></Link>
             </div>
             </nav>
         </div>
@@ -96,8 +102,7 @@ function Inicio() {
                             </div>
                             </div>
                         </div>
-                    </div>
-                        
+                    </div>                        
                     </div>
                     <div className="col-8">
                     {/*Cada ruta debe estar señalada acá, para que funcione correctamente. no usar href*/}
@@ -114,8 +119,9 @@ function Inicio() {
                         <Route path="/Responsys/ResCinco" element={<ResCinco/>} />
                         <Route path="/Responsys/ResSeis" element={<ResSeis/>} />
                         <Route path="/Responsys/ResSiete" element={<ResSiete/>} />
-                        <Route path="/Responsys/ResOcho" element={<ResOcho/>} />
-                        <Route path="/Responsys/ResNueve" element={<ResNueve/>} />
+                        {/*<Route path="/Responsys/ResOcho" element={<ResOcho/>}/>}*/}
+                        <Route path="/Responsys/ResNueve" element={<ResNueve/>}/>
+                        <Route path="/Responsys/ResDiez" element={<ResDiez/>} />
 
                     </Routes>
                     </div>
